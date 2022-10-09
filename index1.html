@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <style>
+    body{background-image: url(images/AdobeStock_255028301.jpeg);
+      background-size: cover;
+      background-position: center center; 
+    }
+   
+ .contaienr {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 70px;
+    right: -900px;
+}
+.welcome{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;    
+}
+#fname{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: larger; 
+}
+#username{
+    width: 180px;
+    padding: 3px;
+    border-radius: 7px;
+}
+#password{
+    width: 180px;
+    padding: 3px;
+    border-radius: 7px;
+}
+
+.para {
+    color: rgba(0, 0, 0, 0.495);
+    text-align: center;
+    
+}
+
+.para1 {
+    color: rgb(244, 242, 242);
+    background-color: rgb(95, 95, 255);
+    width: 250px;
+    height: 35px;
+    border: none;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    </style>
+
+
+<script>
+   var attempt = 3; // Variable to count number of attempts.
+    // Below function Executes on click of login button.
+    function validate(){
+      
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
+    
+    if (username == "mohammad" && password =="0000"){
+      alert ("Login successfully");
+     window.location = "index.html";             // Redirecting to other page.
+    return false;
+  
+    }
+    else{
+    attempt --;
+    // Decrementing by one.
+    alert("Wrong , You have left "+attempt+" attempt ;");
+    // Disabling fields after 3 attempts.
+    if( attempt == 0){
+    document.getElementById("username").disabled = true;
+    document.getElementById("password").disabled = true;
+    document.getElementById("submit").disabled = true;
+    // return false;
+    }
+    }
+}
+
+</script>
+</head>
+<body>
+    <div class="contaienr">
+        <h1 class="welcome">Welcome To Your World</h1>
+        <p class="para">Libraries store the energy that fuels the imagination.<br>They open up windows to the world</p>  
+        
+        <img src="images/story-book.jpg">
+        <br>
+        <label id="fname">Username :</label><input type="text" id="username" name=fname >
+        <br>
+        <label id="fname" for="psw">Password :</label><input id="password" type="password" name="password" required>
+        <br>
+        
+            <a href="#" onclick="validate()" id="submit" class="para1">Login</a>
+            
+</body>
+</html>

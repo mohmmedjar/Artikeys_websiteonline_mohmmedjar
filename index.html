@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Home Page</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<style>
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  width: 900px;
+  position: relative;
+  margin: auto;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 4px;
+  width: 4px;
+  margin: 0 2px;
+  background-color: rgb(255, 250, 250);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 2s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+.para1{
+    display: flex;
+    justify-content: center;
+    background-color: #ded3d3;
+    padding: 15px;
+    font-family:cursive;
+    font-size:3vmax ;
+}
+.para2{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2.4vmin;
+}
+.slid{
+      overflow: hidden;
+      background: linear-gradient(to left, #a1abbd 0%, #c5cf77 16%, #729351 31%, #786c84 48%, #5d447b 64%, #3b1c6b 82%, #3c269f 100%);
+    }
+
+
+    .slid a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+    }
+
+
+    .slid a.right {
+      float: right;
+    }
+    
+.para3{
+      background-color: #e7e7e7;
+      width: 100%;
+      padding: 40px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      justify-content:space-evenly;
+      align-items: flex-end;
+}
+#one{
+    position: relative;
+    right: -280px;
+    margin-top: 1.6vmax;
+    background-repeat: no-repeat;
+}
+.fa{
+    position: relative;
+    right: -10px;
+}
+.footer {
+      /* background-image: url(image22.jpg); */
+      background-size: cover;
+      background-position: center center;
+      padding: 70px;
+      text-align: center;
+      /* filter: brightness( 80% ) contrast( 50% ) saturate( 100% ) blur( 0px ) hue-rotate( 0deg ); */
+}
+.cart{
+    float: right;
+    position: relative;
+    left: -20px;
+}
+
+
+</style>
+</head>
+<body>
+<h1 class="para1">Book Shop</h1>
+<p class="para2">Your time is limited, so don't waste it living someone else's life. Don't be trapped by dogma - which is living with the results of other people's thinking. Don't let the noise of other's opinions drown out your own inner voice. And most important, have the courage to follow your heart and intuition. They somehow already know what you truly want to become. Everything else is secondary.</p>
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img src="images/test.jpg" style="width:100%">
+  
+</div>
+
+<div class="mySlides fade">
+  <img src="images/programming-books-stock_1020-e1517496150286.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="images/image3.jpg" style="width:100%">
+</div>
+
+<div style="text-align:center">
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+  </div>
+
+</div>
+
+<div class="slid">
+    <a href="index1.html" target="_blank" style="font-size:25px">Sign in<i class="fa fa-user"></i></a>
+    <a href="index2.html" target="_blank" style="font-size:25px">Sign up<i class="fa fa-edit"></i></a>
+    <span class="cart"><a href="#" target="_blank" style="font-size:30px"><i class="glyphicon glyphicon-shopping-cart"></i></a></span>
+</div>
+
+<div class="para3">
+
+    <a href="book1.html" target="_blank"
+       style=" background-image:url(images/RPA.png); width: 200px; border-radius: 12px ; height:150px;"
+        id="one">
+    </a>
+    <div class="text1"><a href="book1.html" target="_blank" style="text-decoration:none;">RPA</a></div>
+
+
+    <a href="book2.html" target="_blank"
+    style="background-image:url(images/csharp_.png); width: 200px; border-radius: 12px ; height:150px; "
+        id="one">
+    </a>
+    <div class="text1"><a href="book2.html" target="_blank" style="text-decoration:none;" >C#</a></div>
+
+
+    <a href="book3.html" target="_blank" 
+       style="background-image:url(images/js-logo.png); width: 200px; border-radius: 12px ; height:150px; "
+        id="one">
+    </a>
+    <div class="text1"><a href="book3.html" target="_blank" style="text-decoration:none;" >JAVA script</a></div>
+
+  </div>
+  <div class="footer">
+    <h2>Connect with us</h1>
+    <a href="#" target="_blank" style="font-size:26px"><i class="fa fa-phone"></i></a>
+    <a href="#" target="_blank" style="font-size:26px"><i class="fa fa-facebook-f"></i></a>
+    <a href="#" target="_blank" style="font-size:26px"><i class="fa fa-instagram"></i></a>
+    <a href="#" target="_blank" style="font-size:26px"><i class="fa fa-twitter"></i></a>
+  </div>
+
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); 
+}
+</script>
+
+</body>
+</html> 
